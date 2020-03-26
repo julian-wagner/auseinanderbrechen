@@ -410,8 +410,8 @@ ul.navbar-nav li.active a {
 
 #static-bubble {
 	max-height: 60%;
-	top: 30px;
-	left: 30px;
+	top: 50px;
+	left: 100px;
 	box-shadow: 0 0 40px rgba(0, 0, 0, .15);
 	border-radius: 20px;
 	padding: 30px;
