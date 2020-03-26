@@ -1,0 +1,595 @@
+/******************************************
+    CSS Variables
+******************************************/
+
+:root {
+
+	/* Colors */
+
+    --superlightgrey: #F6F6F6;
+    --lightgrey: #dbdbdb;
+    --grey: #999;
+    --darkgrey: #727272;
+    --superdarkgrey: #242424;
+
+	--color1: #3ba3ff;
+
+	/* Fonts */
+
+	--font-family-standard: "Montserrat", sans-serif;
+}  
+
+
+
+/******************************************
+    Color Classes
+******************************************/
+
+.bg-white {background-color: white;}
+.bg-color1 {background-color: var(--color1);}
+.bg-superlightgrey {background-color: var(--superlightgrey);}
+.bg-lightgrey {background-color: var(--lightgrey);}
+.bg-grey {background-color: var(--grey);}
+.bg-darkgrey {background-color: var(--darkgrey); color: white;}
+.bg-superdarkgrey {background-color: var(--superdarkgrey); color: white;}
+.bg-darkgrey,
+.bg-darkgrey h1,
+.bg-darkgrey h2,
+.bg-darkgrey p {background-color: var(--darkgrey); color: white}
+.bg-darkgrey h2 small {color: var(--lightgrey);}
+.bg-superdarkgrey,
+.bg-superdarkgrey h1,
+.bg-superdarkgrey h2,
+.bg-superdarkgrey h3,
+.bg-superdarkgrey p {background-color: var(--superdarkgrey); color: white;}
+.white {color: white;}
+
+
+
+/******************************************
+    General
+******************************************/
+
+html {
+	overflow-x: hidden;
+}
+
+html.noscroll {
+	overflow: hidden;
+}
+
+body {
+	font-family: var(--font-family-standard);
+    color: var(--superdarkgrey);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.05px;
+    padding-top: 96px;
+    background: var(--superlightgrey);
+    overflow-x: hidden;
+}
+
+@media only screen and (min-width: 992px) {
+	body {
+		padding-top: 91px;	
+	}
+}
+
+body.neatline {
+	
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+a {color:var(--color1);}
+
+a:focus,
+a:active,
+a:hover { 
+	text-decoration: none; 
+	color: var(--darkred);
+}
+
+a[type="tel"] {color:inherit;}
+
+h1 {
+    font-family: var(--font-family-standard);
+    color: var(--color1);
+    margin-bottom: 30px;
+    font-size: calc(24px + 1.5vw);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-top:0;
+}
+
+h2 {
+    font-family: var(--font-family-standard);
+    color: var(--color1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: calc(17px + 1vw);
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-family: var(--font-family-standard);
+    color: var(--color1);
+    margin: 5% 0 4% !important;
+    font-size: calc(17px + 0.5vw);
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-top:0;
+}
+
+h4 {
+    font-family: var(--font-family-standard);
+    color: var(--color1);
+    margin-bottom: 5% !important;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+    margin-top:0;
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    h1 {
+        font-size: calc(22px + 1.5vw);
+    }
+
+    h2 {
+        font-size: calc(18px + 1.5vw);
+    }
+    
+    h3 {
+        font-size: calc(14px + 1.5vw);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+	h4 {
+		font-size: calc(13px + 0.5vw);
+	}
+}
+
+p, 
+li,
+td {
+    font-family: var(--font-family-standard);
+    color: var(--darkgrey);
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0;
+}
+
+p:last-of-type {
+	margin: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+table {
+	table-layout: auto;
+	width: 100%
+}
+
+table tr:nth-child(even) {
+	background: var(--superlightgrey);
+}
+
+table tr td {
+	padding: 2%;
+	font-size: 18px;
+}
+
+table tr td:nth-child(odd) {
+	color: var(--grey);
+}
+
+table tr td:nth-child(even) {
+	text-align: right;
+}
+
+h2 small {
+	font-family: var(--font-family-standard);
+	font-size: 13px;
+    color: var(--grey);
+	margin: 0 0 1.5% 0;
+	text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    line-height: 1.5;
+    letter-spacing: 1.2px;
+}
+
+h3 small {
+	font-size: 13px;
+	line-height: 1.3;
+}
+
+.big-number {
+    font-size: calc(72px + 5vw);
+    font-weight: 700;
+    letter-spacing: -8px;
+    line-height: 0.5;
+    color: var(--darkgrey);
+}
+
+strong {
+    font-weight: 500;
+}
+
+cite {
+    padding: 0 25px;
+    font-weight: 300;
+    font-size: 14px;
+    position: relative;
+    /*margin-left: 25px;*/
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--lightgrey);
+    display: block;
+}
+
+figcaption {
+	color: var(--grey);
+	font-size: 14px !important;
+	text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+	h2 small, h3 small {font-size: 50%;}
+    p, li {font-size: 15px; margin-bottom: 15px;}
+    .dash:before {top: 13px;}
+    cite {font-size: 17px;}
+}
+
+@media only screen and (min-width: 1200px) {
+    p, li {font-size: 17px; margin-bottom: 15px;}
+}
+
+/*cite:before {
+    position: absolute;
+    content: " ";
+    width: 25px;
+    height: 1px;
+    background-color: var(--lightbrown);
+    top: 11px;
+    left: 0;
+    visibility: visible;
+}*/
+
+.max-width-content.container-fluid,
+.max-width-content .container-fluid {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    margin: 0 auto;    
+    padding: 0 15px;
+}
+
+.no-mobile {
+	display: none;
+}
+
+@media only screen and (min-width: 1600px) {
+    .no-mobile {display: block;}
+}
+
+.no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.main { 
+/*     max-width: 1400px; */
+    margin: 0 auto;    
+    padding: 0;
+	z-index: 1;
+    letter-spacing: -0.25px;   
+}
+
+/*
+@media only screen and (min-width: 1024px) {
+	.main {
+		padding: 0 30px;
+	}
+}
+*/
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+}
+
+
+
+/******************************************
+    Header
+******************************************/
+
+#header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 20px 0;
+	background: var(--superdarkgrey);
+	box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+	z-index: 1000;
+}
+
+a.navbar-brand {
+	color: var(--superlightgrey);
+	font-weight: 600;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 667px) {
+	a.navbar-brand {
+		font-size: 18px;
+	}
+}
+
+.navbar-toggler {
+	border-color: var(--superlightgrey);
+}
+
+
+
+/******************************************
+    Navigation
+******************************************/
+
+ul.navbar-nav {
+	margin: 20px 0;
+}
+
+ul.navbar-nav li {
+	margin: 10px 0;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 992px) {
+	ul.navbar-nav {
+		margin: 0;
+	}
+	
+	ul.navbar-nav li {
+		margin: 0 15px;
+	}
+}
+
+ul.navbar-nav li a {
+	border-bottom: 2px solid transparent;
+	transition: .2s ease all;
+}
+
+ul.navbar-nav li a:hover,
+ul.navbar-nav li.active a {
+	color: var(--color1);
+	border-bottom-color: var(--color1);
+}
+
+
+
+/******************************************
+    Neatline
+******************************************/
+
+.neatline h1,
+.nl-fullscreen {
+	display: none !important;
+}
+
+#static-bubble {
+	max-height: 60%;
+	top: 30px;
+	left: 30px;
+	box-shadow: 0 0 40px rgba(0, 0, 0, .15);
+	border-radius: 20px;
+	padding: 30px;
+}
+
+#static-bubble h2,
+#dublin-core-title,
+#static-bubble h3,
+#static-bubble hr  {
+	display: none !important;
+}
+
+#static-bubble a {
+	font-size: 0;
+	color: transparent;
+}
+
+
+
+/******************************************
+    Waypoints
+******************************************/
+
+#waypoints a.title {
+	font-size: 14px;
+}
+
+
+
+/******************************************
+    Special
+******************************************/
+
+#content {
+	outline: none !important;
+}
+
+
+#neatline-map {
+    height: calc(100vh - 96px);
+}
+
+@media only screen and (min-width: 992px) {
+	#neatline-map {
+		height: calc(100vh - 91px);	
+	}
+}
+
+
+
+/******************************************
+    Simple Page
+******************************************/
+
+#simple-pages-breadcrumbs {
+	display: none;
+}
+
+.simple-page .main {
+	max-width: 1400px;
+	margin: 30px 0;
+	padding: 0 15px;
+}
+
+.simple-page .main p {
+	max-width: 640px;
+}
+
+.simple-page #neatline-filter {
+	display: none;
+}
+
+
+
+/******************************************
+    Neatline Filter
+******************************************/
+
+#simile {
+	transition: .3s ease width;
+}
+
+/*
+#simile.w100 {
+	width: 100% !important;
+}
+*/
+
+#neatline-filter {
+	
+}
+
+#neatline-filter .form-check-input {
+	margin-top: 3px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--lightgrey);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--color1);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--color1);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+span.label {
+	margin-left: 3px;
+	margin-right: 15px;
+	display: inline-block;
+	line-height: 34px;
+	vertical-align: top;
+	font-weight: 600;
+	color: white;
+}
+
+
+
+/******************************************
+    Footer
+******************************************/
+
+#footer {
+	margin: 60px 0 30px;
+	padding-top: 30px;
+	border-top: 1px solid var(--lightgrey);
+	text-align: center;
+}
+
+#footer p {
+	max-width: none;
+}
