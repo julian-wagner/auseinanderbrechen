@@ -1,4 +1,4 @@
-# Ausbrechen
+# Auseinanderbrechen
 
 ## Rahmen
 Das Projekt Ausbrechen zeigt Flucht- und Deportierungswege jüdischer Familien aus Köln während der NS-Zeit und entstand im Rahmen des Seminars Modellierung und digitale Karten bei Prof. Dr. Øyvind Eide an der Universität zu Köln.
