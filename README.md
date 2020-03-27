@@ -20,4 +20,4 @@ Das Projekt zeigt nur eine Auswahl der möglichen Daten, die natürlich keinerle
 
 ## Demo
 
-http://lennartkappes.de/map/map/project
+http://lennartkappes.de/map/map/
